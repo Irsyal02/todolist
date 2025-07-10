@@ -21,10 +21,6 @@
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center max-h-screen flex-col">
 
-
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-
-    
     
     <section class="bg-white lg:grid lg:h-screen lg:place-content-center dark:bg-gray-900">
         <div
