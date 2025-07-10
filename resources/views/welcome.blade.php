@@ -20,10 +20,11 @@
         @endif
     </head>
 
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center max-h-screen flex-col">
+<body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex flex-col items-center lg:justify-center max-h-screen">
 
 
 
+<div>
     <section class="bg-white lg:grid lg:h-screen lg:place-content-center dark:bg-gray-900">
             <div
                 class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32"
@@ -31,7 +32,7 @@
                 <div class="max-w-prose text-left">
                 <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl dark:text-white">
                     Tulis setiap ide yang ada di kepalamu dan
-                    <strong class="text-indigo-600"> todolist </strong>
+                    <strong class="text-indigo-600"> to-do-list </strong>
                     di sini
                 </h1>
 
@@ -100,7 +101,47 @@
                 </g>
                 </svg>
             </div>
-    </section>
+        </section>
+
+    
+</div>
+
+
+<!-- FOOTER -->
+<footer class="bg-base-100 dark:bg-dark-base-100 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+  <div class="text-center mx-auto max-w-screen-xl">
+    <p class="text-gray-500 dark:text-gray-400">
+      © Kelompok 9. All rights reserved.
+      <br />
+      Created with
+      <a
+        href="#"
+        class="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+        >Barudak</a
+      >
+      and
+      <a
+        href="#"
+        class="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+        >Laravel</a
+      >.
+    </p>
+  </div>
+    </div>
+</footer>
+
+
+
+
+<!-- <footer class="bg-base-100 dark:bg-dark-base-100 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+            &copy; {{ date('Y') }} Perpustakaan Digital. Dibuat dengan ❤️ untuk dunia pendidikan.
+        </p>
+    </div>
+</footer> -->
+
 
 
 
@@ -326,6 +367,7 @@
                 </div>
             </main>
         </div> -->
+
 
 
 
