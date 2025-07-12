@@ -11,7 +11,7 @@
 
         <div class="mt-4">
             <label for="profile_photo" class="block font-medium text-sm text-gray-700">Foto Profil</label>
-            <input id="profile_photo" type="file" name="profile_photo" class="mt-1 block w-full" accept="image/*">
+            <input id="profile_photo" type="file" name="profile_photo" class="mt-4 block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" accept="image/*">
         </div>
 
 
