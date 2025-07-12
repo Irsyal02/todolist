@@ -26,15 +26,36 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $user = $request->user();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        // Validasi tambahan untuk file foto
+        $request->validate([
+            'profile_photo' => ['nullable', 'image', 'max:2048'],
+        ]);
+
+
+
+        $user->fill($request->validated());
+
+        // Cek dan simpan foto jika ada
+        if ($request->hasFile('profile_photo')) {
+            // Hapus foto lama jika ada
+            if ($user->profile_photo && \Storage::disk('public')->exists($user->profile_photo)) {
+                \Storage::disk('public')->delete($user->profile_photo);
+            }
+
+            // Simpan foto baru
+            $user->profile_photo = $request->file('profile_photo')->store('profile_photos', 'public');
         }
 
-        $request->user()->save();
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
+        }
+
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
+
     }
 
     /**
